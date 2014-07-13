@@ -1,0 +1,83 @@
+# For full documentation and other suggested options, please see
+# http://svn.modxcms.com/docs/display/MODx096/Friendly+URL+Solutions
+# including for unexpected logouts in multi-server/cloud environments
+# and especially for the first three commented out rules
+
+#php_flag register_globals Off
+#AddDefaultCharset utf-8
+#php_value date.timezone Europe/Moscow
+
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /
+
+
+
+# Досье пользователя.
+RewriteRule ^users/([0-9]+)\.html$	userinfo.php?user_id=$1
+# Список всех пользователей
+RewriteRule ^users/?$			users.php?%{QUERY_STRING}
+
+# Новости общим списком
+RewriteRule ^sendsms/?$			sendsms.php
+# Новости общим списком
+RewriteRule ^login/?$			login.php
+# Новости общим списком
+RewriteRule ^orders/?$			orders.php 
+# Новости общим списком
+RewriteRule ^order/?$			order.php
+# Новости общим списком
+RewriteRule ^ordercheck/?$			ordercheck.php
+# Новости общим списком
+RewriteRule ^favouriteaddresses/?$			favouriteaddresses.php
+# Новости общим списком
+RewriteRule ^historyaddresses/?$			historyaddresses.php
+# Новости общим списком
+RewriteRule ^nearestaddress/?$			nearestaddress.php
+# Новости общим списком
+RewriteRule ^sendreview/?$			sendreview.php
+# Новости общим списком
+RewriteRule ^changeprofile/?$			changeprofile.php
+# Новости общим списком
+RewriteRule ^orderprice/?$			orderprice.php
+# Новости общим списком
+RewriteRule ^searchstreet/?$			searchstreet.php
+# Новости общим списком
+RewriteRule ^searchaddress/?$			searchaddress.php
+# Новости общим списком
+RewriteRule ^orderprice_i/?$			orderprice_i.php
+# Новости общим списком
+RewriteRule ^orderprice_s/?$			orderprice_s.php
+# Новости общим списком
+RewriteRule ^createorder/?$			createorder.php
+# Новости общим списком
+RewriteRule ^cancelorder/?$			cancelorder.php
+# Новости общим списком
+RewriteRule ^createorder_s/?$			createorder_s.php
+# Новости общим списком
+RewriteRule ^sendpushtoken/?$			sendpushtoken.php
+# Новости общим списком
+RewriteRule ^sendpush/?$			sendpush.php
+# Новости общим списком
+RewriteRule ^addfavouriteaddress/?$			addfavouriteaddress.php
+# Новости общим списком
+RewriteRule ^removefavouriteaddress/?$			removefavouriteaddress.php
+# Новости общим списком
+RewriteRule ^rates/?$			rates.php
+# Новости общим списком
+RewriteRule ^ratess/?$			ratess.php
+# Новости общим списком
+RewriteRule ^cities/?$			?cities=1
+# Новости общим списком
+RewriteRule ^about/?$			?about=1
+
+
+
+
+
+# Новости по разделам
+RewriteRule ^news/([a-z_]+)/?$		news.php?cat=$1
+# Страница одной новости
+RewriteRule ^news/([0-9]+).html$	news.php?id=$1
+
+

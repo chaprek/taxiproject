@@ -1,0 +1,220 @@
+body {
+    font-family: Arial;
+}
+.header {
+    position: relative;
+    height: 60px;
+    padding-top: 20px;
+}
+.clear {
+    clear: both!important;
+    height: 0!important;
+    width: 0!important;
+}
+.logo {
+    float: left;
+}
+.menu {
+    margin-left: 10px;
+    float: left;
+}
+.menu div{
+    height: 38px;
+    padding: 0 28px;
+    float: left;
+    cursor: pointer;
+}
+.menu div p, .show_table p{
+    line-height: 38px;
+    color: #2993d1;
+    margin: 0;
+    font-size: 14px;
+}
+.menu div.act{
+    background-color: #2993d1;
+}
+.menu div.act p{
+    color: #fff;
+}
+.show_table {
+    background-color:#f0f0f0;
+    background: -moz-linear-gradient( top , #fff 0%, #f0f0f0 100%);
+    background: -o-linear-gradient( 	top , #fff 0%,  #f0f0f0 100%);
+    background: -webkit-linear-gradient( 	top , #fff 0%,  #f0f0f0 100%);
+    background: -ms-linear-gradient( 	top , #fff 0%,  #f0f0f0 100%);
+    background: linear-gradient( top , #fff 0%, #f0f0f0 100%);
+    border: 1px solid #f1f1f1;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    height: 38px;
+    padding: 0 28px;
+    top: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.filtrs_line {
+    padding: 16px 0;
+    position: relative;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    height: 25px;
+    margin-bottom: 60px;
+}
+.title {
+    float: left;
+}
+.title h1 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: #2993d1;
+    margin: 0;
+}
+.filtrs {
+    float: right;
+    width: 500px;
+}
+.filtrs img{
+    position: relative;
+    top: 5px;
+}
+.filtrs span{
+    display: inline-block;
+    border-right: 1px solid #999;
+    color: #999;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.filtrs span.act {
+    color: #2993d1;
+}
+.display_filtrs {
+    display: none;
+    position: absolute;
+    border-bottom: 1px solid #999;
+    top: 57px;
+    right: 0px;
+    width: 500px;
+    height: 25px;
+    padding: 11px;
+}
+.display_filtrs span {
+    color: #999;
+    padding-right: 10px;
+}
+.display_filtrs input {
+    height: 25px;
+    color: #2993d1;
+    border: none;
+    width: 130px;
+    font-weight: bold;
+}
+#per_day input {
+    background: none;
+    background: url('/img/cal.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 40px;
+}
+
+.display_filtrs button {
+    background: none;
+    border: none;
+    color: #2993d1;
+}
+#use {
+    display: none;
+}
+
+
+
+.orders_pd {
+    position: relative;
+    height: 500px;   
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 900px;
+}
+.orders_pd div {
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    background-color: #ad0000;
+    bottom: 15px;
+    text-align: center;
+}
+.orders_pd div p{
+    position: relative;
+    bottom: 25px;
+    line-height: 0px;
+    font-size: 14px;
+    color: #999;    
+}
+.orders_pd div span{
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    line-height: 0px;
+    font-size: 12px;
+    color: #333;    
+}
+
+
+
+#phone {
+    color: #A7ACAF;
+}
+.back, {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 13px;
+    color: #333;
+    border: 1px solid #555;
+}
+.block_filtr, .users_table {
+    margin: 15px 0;
+}
+
+
+/*-TABLE-*/
+table {border-collapse: collapse;}
+table tr:nth-child(2n + 1) {
+    background-color: #e9f4fa;
+}
+th {
+    background-color:#f0f0f0;
+    background: -moz-linear-gradient( top , #fff 0%, #f0f0f0 100%);
+    background: -o-linear-gradient( 	top , #fff 0%,  #f0f0f0 100%);
+    background: -webkit-linear-gradient( 	top , #fff 0%,  #f0f0f0 100%);
+    background: -ms-linear-gradient( 	top , #fff 0%,  #f0f0f0 100%);
+    background: linear-gradient( top , #fff 0%, #f0f0f0 100%);
+    color: #2993d1;
+    font-size: 12px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+td {
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #fff;
+    border-spacing: 0;
+    border-collapse: collapse;
+    color: #555;
+    padding: 5px;
+    font-size: 13px;
+}
+td.sec {
+    background-color: #e9f4fa;
+}
+.edit, td .change {
+    cursor: pointer;
+}
+.edit:hover, td .change {
+    color: #2993D1;
+}

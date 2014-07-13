@@ -1,0 +1,585 @@
+2013-11-25 12:41:00 178.54.6.69
+/controllers/cms.php
+uk
+table=>cliens
+uid=>27
+name=>chisss
+phone=>380635753434
+city=>1
+services=>12,10
+active=>0
+os=>
+block=>0
+authToken=>8231
+pushToken=>69dce1b3c582d45ecb3e06ff9f4857a37715e1adeef614e055fabed08a614a1c
+cardnumber=>
+discount=>0
+count=>0
+---------------------------
+2013-11-25 12:41:13 178.54.6.69
+/controllers/cms.php
+uk
+table=>cliens
+uid=>27
+name=>chisss
+phone=>380635753434
+city=>1
+services=>12,10,17
+active=>0
+os=>
+block=>0
+authToken=>8231
+pushToken=>69dce1b3c582d45ecb3e06ff9f4857a37715e1adeef614e055fabed08a614a1c
+cardnumber=>
+discount=>0
+count=>0
+---------------------------
+2013-12-12 11:28:27 178.54.6.69
+/controllers/cms.php
+uk
+table=>cliens
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,4
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>47
+---------------------------
+2013-12-12 11:32:26 178.54.6.69
+/controllers/cms.php
+uk
+table=>cliens
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,10
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>47
+---------------------------
+2013-12-12 11:33:54 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,17
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>47
+---------------------------
+2013-12-12 11:37:35 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,10
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>47
+---------------------------
+2013-12-12 11:38:17 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,12
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>47
+---------------------------
+2013-12-12 11:38:27 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,12,17
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>47
+---------------------------
+2013-12-12 13:31:21 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>9
+type=>4
+rate=>11
+city_id=>2
+---------------------------
+2013-12-12 13:31:52 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>9
+type=>4
+rate=>10
+city_id=>2
+---------------------------
+2013-12-12 13:34:52 178.54.6.69
+/controllers/cms.php
+uk
+table=>orders
+uid=>58
+client_id=>186
+date=>2013-11-04 17:07:11
+price=>10
+key_points=>34
+phone=>067-430-67-88
+town=>2
+street=>Театральный переулок
+house=>3
+streetto=>по городу
+houseto=>
+route=>Театральный переулок	 3	 0	-1	 1	0	30.12.1899	 0	0	0	0	0	0	0по городу			0	 1	0	30.12.1899		0	0	0	0	0	0
+pretime=>2013-11-04 17:23:42
+ordertype=>1
+driver=>17
+driver_info=>AA8830AA, Suzuki Scuser, Черный, 0931939289, 2013-11-04 17:23:42
+meet=>
+endtask=>0
+old_num=>79
+---------------------------
+2013-12-12 13:42:41 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>3
+type=>10
+rate=>11
+city_id=>1
+---------------------------
+2013-12-12 13:42:50 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>3
+type=>10
+rate=>10
+city_id=>1
+---------------------------
+2013-12-12 13:43:25 178.54.6.69
+/controllers/cms.php
+uk
+table=>orders
+uid=>10
+client_id=>186
+date=>2013-11-04 17:07:11
+price=>10
+key_points=>34
+phone=>067-430-67-88
+town=>2
+street=>Театральный переулок
+house=>3
+streetto=>по городу
+houseto=>
+route=>Театральный переулок	 3	 0	-1	 1	0	30.12.1899	 0	0	0	0	0	0	0по городу			0	 1	0	30.12.1899		0	0	0	0	0	0
+pretime=>2013-11-04 17:23:42
+ordertype=>1
+driver=>17
+driver_info=>AA8830AA, Suzuki Scuser, Черный, 0931939289, 2013-11-04 17:23:42
+meet=>
+endtask=>0
+old_num=>79
+---------------------------
+2013-12-12 14:43:53 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,12,17п
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>48
+---------------------------
+2013-12-12 14:58:29 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,12,17
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>48
+---------------------------
+2013-12-12 15:01:48 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,12
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>48
+---------------------------
+2013-12-12 15:22:58 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>29
+type=>1
+rate=>1
+city_id=>5
+---------------------------
+2013-12-12 15:23:19 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,12
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>48
+---------------------------
+2013-12-12 15:33:22 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>188
+name=>Петр
+phone=>380982079999
+city=>1
+services=>
+active=>0
+os=>
+block=>0
+authToken=>cd655f8c590e9cf8986b723cb4d29314
+pushToken=>3e01744aa100cfcffa1c031b0980eb42238b85533456445c60cb0870df1d50ae
+cardnumber=>
+discount=>0
+count=>3
+---------------------------
+2013-12-12 15:37:11 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>188
+name=>Петр
+phone=>380982079999
+city=>1
+services=>12
+active=>0
+os=>
+block=>0
+authToken=>cd655f8c590e9cf8986b723cb4d29314
+pushToken=>3e01744aa100cfcffa1c031b0980eb42238b85533456445c60cb0870df1d50ae
+cardnumber=>
+discount=>0
+count=>3
+---------------------------
+2013-12-12 15:46:52 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>188
+name=>Петр
+phone=>380982079999
+city=>1
+services=>12
+active=>0
+os=>
+block=>0
+authToken=>cd655f8c590e9cf8986b723cb4d29314
+pushToken=>3e01744aa100cfcffa1c031b0980eb42238b85533456445c60cb0870df1d50ae
+cardnumber=>
+discount=>0
+count=>3
+---------------------------
+2013-12-12 15:50:31 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>186
+name=>Vadim
+phone=>380674306788
+city=>1
+services=>1,12,17
+active=>0
+os=>
+block=>0
+authToken=>18d74120931cf8c4e0dc7ca19fe37f71
+pushToken=>37094e095eea6585502546be35e03761f87321d120a6deb9367eb866a1164a70
+cardnumber=>
+discount=>0
+count=>48
+---------------------------
+2013-12-12 15:50:43 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>188
+name=>Петр
+phone=>380982079999
+city=>1
+services=>12,17
+active=>0
+os=>
+block=>0
+authToken=>cd655f8c590e9cf8986b723cb4d29314
+pushToken=>3e01744aa100cfcffa1c031b0980eb42238b85533456445c60cb0870df1d50ae
+cardnumber=>
+discount=>0
+count=>3
+---------------------------
+2013-12-12 15:50:49 178.54.6.69
+/controllers/cms.php
+uk
+table=>clients
+uid=>188
+name=>Петр
+phone=>380982079999
+city=>1
+services=>12
+active=>0
+os=>
+block=>0
+authToken=>cd655f8c590e9cf8986b723cb4d29314
+pushToken=>3e01744aa100cfcffa1c031b0980eb42238b85533456445c60cb0870df1d50ae
+cardnumber=>
+discount=>0
+count=>3
+---------------------------
+2013-12-12 15:51:08 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>4
+type=>12
+rate=>21
+city_id=>1
+---------------------------
+2013-12-12 15:51:14 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>4
+type=>12
+rate=>20
+city_id=>1
+---------------------------
+2013-12-12 16:14:08 178.54.6.69
+/controllers/cms.php
+uk
+table=>orders
+uid=>3
+client_id=>186
+date=>2013-11-04 12:28:11
+price=>129
+key_points=>7,8,9
+phone=>067-430-67-88
+town=>1
+street=>улица Ревуцкого, 
+house=>5
+streetto=>проспект Победы, 
+houseto=>6
+route=>бла
+pretime=>0000-00-00 00:00:00
+ordertype=>1
+driver=>5569
+driver_info=>АН6367НЕ, Джили СК, Серый, 0634016891, 
+meet=>
+endtask=>0
+old_num=>11094820
+---------------------------
+2013-12-17 14:42:26 178.54.6.69
+/controllers/cms.php
+uk
+table=>tariffs
+uid=>4
+type=>12
+rate=>20
+city_id=>1
+---------------------------
+2014-01-05 10:37:16 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>28
+type=>222
+rate=>19
+city_id=>4
+---------------------------
+2014-01-05 10:37:29 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>27
+type=>111
+rate=>2.6
+city_id=>4
+---------------------------
+2014-01-05 10:42:27 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>28
+type=>222
+rate=>21
+city_id=>4
+---------------------------
+2014-01-05 10:42:42 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>27
+type=>111
+rate=>2.8
+city_id=>4
+---------------------------
+2014-01-05 18:51:20 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>72
+type=>333
+rate=>2
+city_id=>2
+---------------------------
+2014-01-05 18:53:23 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>35
+type=>222
+rate=>20
+city_id=>5
+---------------------------
+2014-01-05 18:53:40 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>34
+type=>111
+rate=>3.5
+city_id=>5
+---------------------------
+2014-01-05 18:53:52 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>75
+type=>333
+rate=>2
+city_id=>5
+---------------------------
+2014-01-05 18:56:21 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>77
+type=>333
+rate=>5
+city_id=>7
+---------------------------
+2014-01-05 18:59:23 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>79
+type=>333
+rate=>2
+city_id=>9
+---------------------------
+2014-01-05 19:00:32 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>80
+type=>333
+rate=>2
+city_id=>10
+---------------------------
+2014-01-05 19:14:16 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>72
+type=>333
+rate=>1
+city_id=>2
+---------------------------
+2014-01-08 18:40:32 176.36.200.13
+/controllers/cms.php
+ru
+table=>tariffs
+uid=>69
+type=>111
+rate=>2.3
+city_id=>10
+---------------------------
