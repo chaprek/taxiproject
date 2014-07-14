@@ -34,6 +34,7 @@
                                 
                 $ins_arr['authToken'] = $cod;
                 $ins_arr['date'] = date('Y.m.d H:i:m');
+                $ins_arr['time'] = time();
                 
                 if(!empty($_GET['card_number'])){
                     $ins_arr['cardnumber'] = $_GET['card_number'];

@@ -6,7 +6,7 @@
     }
     
     if(!isset($_COOKIE['login']) || $_COOKIE['login'] != 'taximoto'){
-        display('auth', $date);
+        display('auth');
         return;
     }
     

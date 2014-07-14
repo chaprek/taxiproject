@@ -51,7 +51,8 @@
                    
                       
             if(!isset($fadress['street'])){
-                                    
+                  
+                  $createorder['time'] = time();
                   $row_num = insert_in_line("fav_adress", $createorder, true);
               
                $fadress = make_array_from_query(select_where('fav_adress', array( 'uid' => $row_num), true));

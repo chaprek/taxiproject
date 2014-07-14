@@ -1,6 +1,6 @@
 <?php
 
-function display($tmp, $arr){
+function display($tmp, $arr = array()){
     
    extract($arr);     
 
@@ -465,6 +465,7 @@ function second_request($num, $id_order = false, $city){
         }
         $order_info['pretime'] = $infos['pretime'];
         $order_info['old_num'] = $num;
+        $order_info['time'] = time();
          
         //проверяем не внесен ли уже этот заказ
         $id_o = make_array_from_query(select_where("orders", array('old_num' => $num), true), true); 
@@ -712,7 +713,8 @@ function second_request_evos($num, $result, $id){
         }
         
         $order_info['old_num'] = $num;
-        
+        $order_info['time'] = time();
+
          //проверяем не внесен ли уже этот заказ
         $id_o = make_array_from_query(select_where("orders", array('old_num' => $num), true), true); 
         if(!isset($id_o['uid'])){   
