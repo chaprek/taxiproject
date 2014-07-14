@@ -93,11 +93,46 @@
                 
                                 
                 $car_info = arr_iconv(explode(',', $orders['driver_info']));
-                                             
+                   
+                if(count($car_info) > 3){
+                    $model = $car_info[1];
+                    $number = $car_info[0];
+                    $phone = $car_info[3];
+
+                    $datecar = explode('T', $car_info[4]);
+
+                    $mdy = explode('-',$datecar[0]);
+                
+                    // Разбиение даты
+                    $hmspre = explode('.',$datecar[1]);
+                    $hms = explode(':',$hmspre[0]);
+
+                    // вывод результата
+                    $time  = mktime($hms[0], $hms[1],$hms[2], $mdy[1], $mdy[2], $mdy[0]);
+                } else {
+                    $car_info = arr_iconv(explode(' : ', $orders['driver_info']));
+
+                    $car_info2 = explode(' ', $car_info[1]);
+
+                    $model = $car_info2[2];
+                    $number = $car_info2[0];
+                    $phone = $car_info2[count($car_info2) - 1];
+
+                    $pretime = explode(':', trim(substr($car_info[0], 2)));
+                   // Разбиение строки в 3 части - date, time and AM/PM 
+                    $dt_elements = explode(' ',$orders['date']);
+                    // Разбиение даты
+                    $date_elements = explode('-',$dt_elements[0]);
+
+                    $time = mktime($pretime[0], $pretime[1],0, $date_elements[1], $date_elements[2], $date_elements[0]);
+                }
+
+
                 $orders['car'] = array(
-                    'model' => $car_info[1],
-                    'number' => $car_info[0],
-                    'phone' => $car_info[3]            
+                    'model' => $model,
+                    'number' => $number,
+                    'phone' => $phone,
+                    'date' => $time           
                 );
                                                 
                 $dat = $orders['pretime'];

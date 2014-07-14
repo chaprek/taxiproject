@@ -37,39 +37,6 @@
                     $error = true;
             }
             
-            
-      //      $city = make_array_from_query(select_where('cities', array('uid' => $_GET['city'], 'lang' => $config['lang']), true));
-//            $city = $city['name'];
-//            
-//            $data="https://maps.googleapis.com/maps/api/place/autocomplete/json?input=".urlencode( $city." ".$_GET['livestring'])."&types=geocode&components=country:ua&sensor=false&key=AIzaSyDl76KuHuAAg0thNBPloO3hrybv4_x5wPg";
-//    
-//            $request = $data;
-//            
-//            $curl  =  curl_init($request); 
-//            /*-  Устанавливаем параметры  соединения-*/ 
-//            curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-//            
-//            $json  =  curl_exec($curl);
-//            
-//            curl_close($curl);
-//            
-//            if($resp=json_decode($json, true)){
-//            
-//                $street_arr = array();
-//                
-//                foreach($resp['predictions'] as $re){
-//                    if(count($re['terms'])){
-//                        $street_arr[] = $re['terms'][0]['value'];
-//                    }
-//                }
-//                
-//                $all['data'] = $street_arr;
-//            } else {
-//                $error = true;
-//            }
-            
-            
-            
         } else {
             //print_r($config['evos_url'][$_GET['city']]);
             $WebOrder = new weborders($config['evos_url'][$_GET['city']]);

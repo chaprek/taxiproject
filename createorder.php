@@ -26,7 +26,7 @@
 			
 			foreach(json_decode(str_replace("'", "", $_POST['key_point'])) as $k){
 				if($k->key_number == 1){
-					$city = $k->city->uid;           
+					$city = $k->city->uid;
 				}
 			}
 			

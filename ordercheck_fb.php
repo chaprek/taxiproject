@@ -21,7 +21,7 @@
                     $orderStatus = "ORDER_READY";
                 
                 } elseif(isset($order_result['driver']) && $order_result['endtask'] != 0 ){
-                    //добполнение для автоматического назначения машины
+                    //Г¤Г®ГЎГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¤Г«Гї Г ГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГ®ГЈГ® Г­Г Г§Г­Г Г·ГҐГ­ГЁГї Г¬Г ГёГЁГ­Г»
                     
                     if($order_result['endtask'] == 5){
                         $orderStatus = "ORDER_NO_CAR";
@@ -74,7 +74,7 @@
                         delete_row('new_orders', array('num_row' => $order_id), true);  
                           
                         $orderS = "2";
-                        $adn = "Нет машины";
+                        $adn = "ГЌГҐГІ Г¬Г ГёГЁГ­Г»";
                         $id_order = "";
                         if($arr['pushToken'] != false && $config['os']){
                             send_push($arr['pushToken'], iconv('cp1251', 'utf-8', $adn), $id_order, $orderS);
@@ -85,7 +85,7 @@
                         delete_row('new_orders', array('num_row' => $order_id), true);  
                         
                         $orderS = "1";
-                        $adn = "Заказ отменен";
+                        $adn = "Г‡Г ГЄГ Г§ Г®ГІГ¬ГҐГ­ГҐГ­";
                         $id_order = "";
                         if($arr['pushToken'] != false && $config['os']){
                             send_push($arr['pushToken'], iconv('cp1251', 'utf-8', $adn), $id_order, $orderS);

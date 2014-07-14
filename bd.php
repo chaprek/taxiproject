@@ -199,7 +199,11 @@ function make_array_from_query($query, $decod = false){
                 if($decod){
                     $array[$i][$k] = $col;
                 } else {
-                    $array[$i][$k] = iconv('cp1251', 'utf-8', $col);
+                    if(!mb_detect_encoding($col, 'UTF-8', true)){
+                        $array[$i][$k] = iconv('cp1251', 'UTF-8', trim($col));
+                    } else {
+                        $array[$i][$k] = trim($col);
+                    }
                 }
                 //$array[$i][$k] = ($decod)?iconv('cp1251', 'utf-8', $col):$col;
             } 
@@ -339,8 +343,7 @@ function select_orders($min, $max){
     
     global $dbl;
     
-    $query = "SELECT * FROM `orders` WHERE 
-    (date > '$min 00:00:00') AND (date < '$max 23:59:59') ";
+    $query = "SELECT * FROM `orders` WHERE date > '".$min." 00:00:00' AND (date < '".$max." 23:59:59') ";
         
    return mysql_query($query, $dbl);
 }

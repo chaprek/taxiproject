@@ -58,7 +58,7 @@
                        $upd_arr['city'] = $ins_arr['city'];
                     }
                     
-                    if(!empty($_GET['card_number'])){
+                    if(!empty($_GET['card_number'])){  
                         $upd_arr['cardnumber'] = $_GET['card_number'];
                     }
                     

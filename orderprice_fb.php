@@ -64,13 +64,21 @@
 				$phone = '';
 			}
 				$usercard = (!empty($id['cardnumber']))?$id['cardnumber']:"";
-								
+				
+				$fp=fopen("price_log.log","a");
+		        fwrite($fp,date("Y-m-d H:i:s")." ".$_SERVER['REMOTE_ADDR']."\n---PRICE_USER_LOGS---\n". $_SERVER['REQUEST_URI']."\n".json_encode($id)."\n-\n-\n");
+		        fclose($fp);
+
 				$price = new Calculation();
 	
 				$result = $price->tariffAction($_POST['key_point'], $city_id, $usercard, $phone);
+
+				$fp=fopen("price_log.log","a");
+		        fwrite($fp,date("Y-m-d H:i:s")." ".$_SERVER['REMOTE_ADDR']."\n---PRICE_FB_RESULT_LOGS---\n". $_SERVER['REQUEST_URI']."\n".json_encode($result)."\n-\n-\n");
+		        fclose($fp);
 							
-				$all['price'] = $result['tariff'];
-				$all['discount'] = $result['discount'];
+				$all['price'] = 1*$result['tariff'];
+				$all['discount'] = 1*$result['discount'];
 				$all['car_wait_time'] = 10;
 			
 		} else {
@@ -104,7 +112,7 @@
 				// Вычисляем стоимость
 			  
 				$serv = (isset($_POST['services']))?$_POST['services']:0;
-				$old_price = $all['price'] = distance_count($price, $serv, $city_id);
+				$old_price = $all['price'] = 1*distance_count($price, $serv, $city_id);
 				
 				if(isset($_POST['authToken'])){
 					
@@ -129,7 +137,7 @@
 					$rat[$val['type']] = $val['rate'];
 				}
 				
-				 $all['price'] = ($all['price'] > $rat['222'])?ceil($all['price']):ceil($rat['222']);//проверяем больше ли сумма минимального тарифа
+				 $all['price'] = 1*(($all['price'] > $rat['222'])?ceil($all['price']):ceil($rat['222']));//проверяем больше ли сумма минимального тарифа
 				
 				if(isset($card) && is_array($card) && count($rat)>0){
 					$data="";

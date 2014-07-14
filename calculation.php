@@ -111,6 +111,11 @@ $fpon=fopen("post_acces.log","a");
      }
       
      fclose($fp);
+
+        $fpon=fopen("post_acces.log","a");
+        fwrite($fpon,$response."---Calculation---\n");
+        fclose($fpon);
+
         $response = iconv( "windows-1251","UTF-8", $response);
              
         $response = explode('<br>', $response);
@@ -120,20 +125,20 @@ $fpon=fopen("post_acces.log","a");
         for($i=0; $i<count($response); $i++)
         {
             $tmp = explode('=', $response[$i]);
-            $res[$tmp[0]] = $tmp[1];    
+            $res[$tmp[0]] = (!empty($tmp[1]))?$tmp[1]:0;    
         }
         
            
       $result = array(
         'tariff' => !empty($res['pr_outprice']) ? $res['pr_outprice'] : 0,
-                    'waitprice'=>$res['out_wait_price'],
-                    'puredriveprice'=>$res['out_pure_drive_price'],
-                    'distance'=>$res['out_dist_total'],
-                    'distcity'=>$res['out_dist_city'],
-                    'distsuburb'=>$res['out_dist_suburb'],
-                    'driveupprice'=>$res['out_driveup_price'],
-                    'discount'=>$res['DC_out_total_discount'],
-                    'error' => false
+        'waitprice'=>$res['out_wait_price'],
+        'puredriveprice'=>$res['out_pure_drive_price'],
+        'distance'=>$res['out_dist_total'],
+        'distcity'=>$res['out_dist_city'],
+        'distsuburb'=>$res['out_dist_suburb'],
+        'driveupprice'=>$res['out_driveup_price'],
+        'discount'=>$res['DC_out_total_discount'],
+        'error' => false
       );
       
       
