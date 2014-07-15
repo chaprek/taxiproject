@@ -6,8 +6,23 @@
 	$WebOrder = new weborders($config['evos_url'][$city_id]);
 	//Получаем ответ на запрос
 
+	//список объектов
+	$type_array = array(
+		'railway' => 'ЖД', 
+		'embassy' => 'П', 
+		'autostation' => 'АВ', 
+		'exhibition' => 'В', 
+		'school' => 'ШК', 
+		'hotel' => 'Г', 
+		'supermapket' => 'С', 
+		'restoran' => 'Р', 
+		'metro' => 'М', 
+		'kp' => 'КП', 
+		'hospital' => 'БЦ'
+	);
+
 //print_r($config['evos_url'][$city_id]);
-		$data="http://maps.googleapis.com/maps/api/geocode/json?sensor=false&language=ru&address=";
+		//$data="http://maps.googleapis.com/maps/api/geocode/json?sensor=false&language=ru&address=";
 	
 		$route = array();
 	
@@ -18,14 +33,21 @@
 			if($keys != null){
 				
 				$count = count($keys);
-																
-				foreach($keys as $key){
 					
+				foreach($keys as $key){
+					$object = false;
 					if(isset($key->key_number)){
 						if(empty($key->gps->lat)){
-							if(strpos($key->street, "_") === false){
+
+							$type = explode(" ", $key->street);
+									
+							if(in_array($type[0], $type_array)){
+								$object = true;
+							}
+
+							if(strpos($key->street, "_") === false && !$object){
 								$route[$key->key_number - 1]['name'] = mb_strtoupper(trim(str_replace("_", " ", $key->street)), "UTF-8");
-								$route[$key->key_number - 1]['number'] = $key->house;
+								$route[$key->key_number - 1]['number'] = (!empty($key->house))?$key->house:1;
 							} else {
 								$route[$key->key_number - 1]['name'] = trim(str_replace("_", " ", $key->street));                                
 							}
@@ -82,11 +104,11 @@
 		  
 		if(json_decode($cmd) != null){
 
-			$fp=fopen("post_acces.log","a");
+			$fp=fopen("price_log.log","a");
 			fwrite($fp,date("Y-m-d H:i:s")." ".$_SERVER['REMOTE_ADDR']."\n---ORDERPRICE_SB_LOG---\n". $_SERVER['REQUEST_URI']."\n".$cmd."\n-\n-\n");
 			fclose($fp);
 			
-			$all['price'] = 1*json_decode($cmd)->order_cost;
+			$all['price'] = 1*(json_decode($cmd)->order_cost);
 		} else {
 			$all['price'] = 0;
 			$error = true;

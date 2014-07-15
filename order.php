@@ -100,6 +100,9 @@
                     $phone = $car_info[3];
 
                     $datecar = explode('T', $car_info[4]);
+                    if(count($datecar) < 2){
+                        $datecar = explode(' ', $car_info[4]);
+                    }
 
                     $mdy = explode('-',$datecar[0]);
                 

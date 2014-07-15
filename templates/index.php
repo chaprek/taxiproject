@@ -2,6 +2,7 @@
     <html>
     <head>
         <meta charset="cp1251"/>
+        <link rel="shortcut icon" href="img/eye.png" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script src="js/jquery-1.8.2.min.js"></script>
         

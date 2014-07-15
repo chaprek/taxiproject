@@ -105,12 +105,12 @@
 					$price += mb_substr($resp->routes[0]->legs[0]->distance->text, 0, -5);    
 				}
 				 
-			  }
-			  //подключаем базу
-			  require_once("base/db".$city_id.".php");
-			  
+				}
+				//подключаем базу
+				require_once("base/db".$city_id.".php");
+				
 				// Вычисляем стоимость
-			  
+				
 				$serv = (isset($_POST['services']))?$_POST['services']:0;
 				$old_price = $all['price'] = 1*distance_count($price, $serv, $city_id);
 				
@@ -118,14 +118,16 @@
 					
 					$id = make_array_from_query(select_where('clients', array('authToken' => $_POST['authToken']), true));
 					
-					$card = check_card($id['cardnumber'], $id['phone'], $id['city'], $id);
-					 
-					if(is_array($card)){
-						if($card['rel'] != 0){
-							$all['price'] *= (1 - $card['rel']/100);
-						}
-						if($card['abs'] != 0){
-							$all['price'] = $all['price'] - $card['abs'];
+					if(!empty($id['phone'])){
+						$card = check_card($id['cardnumber'], $id['phone'], $id['city'], $id);
+						
+						if(is_array($card)){
+							if($card['rel'] != 0){
+								$all['price'] *= (1 - $card['rel']/100);
+							}
+							if($card['abs'] != 0){
+								$all['price'] = $all['price'] - $card['abs'];
+							}
 						}
 					}
 				}

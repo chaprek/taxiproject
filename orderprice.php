@@ -20,17 +20,18 @@
 		if(isset($key->key_number)){
 			if($key->key_number == 1){
 				$city_id = $key->city->uid;
+				$isstreet = $key->street;
 				break;
 			}
 		}
 	}
 	
-		$fp=fopen("price_log.log","a");
-        fwrite($fp,date("Y-m-d H:i:s")." ".$_SERVER['REMOTE_ADDR']."\n---PRICE_POST_LOGS---\n". $_SERVER['REQUEST_URI']."\n".json_encode($_POST)."\n-\n-\n");
-        fclose($fp);
+	$fp=fopen("price_log.log","a");
+	fwrite($fp,date("Y-m-d H:i:s")." ".$_SERVER['REMOTE_ADDR']."\n---PRICE_POST_LOGS---\n". $_SERVER['REQUEST_URI']."\n".json_encode($_POST)."\n-\n-\n");
+	fclose($fp);
 
 
-	if(!empty($city_id)){
+	if(!empty($city_id) && !empty($isstreet)){
 		if(in_array($city_id, $config['first_base'])){
 			require_once("orderprice_fb.php");
 		} else {
@@ -50,11 +51,11 @@
 			$all['status']['debugInfo'] = $php_errormsg; 
 	}
 	
-		$fp=fopen("price_log.log","a");
-        fwrite($fp,date("Y-m-d H:i:s")." ".$_SERVER['REMOTE_ADDR']."\n---PRICE_RESULT_LOGS---\n". $_SERVER['REQUEST_URI']."\n".jdecoder(json_encode($all))."\n-\n-\n");
-        fclose($fp);
+	$fp=fopen("price_log.log","a");
+	fwrite($fp,date("Y-m-d H:i:s")." ".$_SERVER['REMOTE_ADDR']."\n---PRICE_RESULT_LOGS---\n". $_SERVER['REQUEST_URI']."\n".jdecoder(json_encode($all))."\n-\n-\n");
+	fclose($fp);
 
-	 echo jdecoder(json_encode($all));
+	echo jdecoder(json_encode($all));
 
 		return;
 		

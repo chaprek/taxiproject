@@ -200,7 +200,7 @@ function make_array_from_query($query, $decod = false){
                     $array[$i][$k] = $col;
                 } else {
                     if(!mb_detect_encoding($col, 'UTF-8', true)){
-                        $array[$i][$k] = iconv('cp1251', 'UTF-8', trim($col));
+                        $array[$i][$k] = iconv('cp1251', 'UTF-8//IGNORE', trim($col));
                     } else {
                         $array[$i][$k] = trim($col);
                     }
